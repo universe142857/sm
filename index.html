@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery标题展开显示文字内容代码 - 站长素材</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+	*{margin: 0; padding: 0}
+	.container{
+		max-width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+		background: #f0f0f0;
+	}
+	.my-biji-view{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	.my-biji-view li{
+		border-top: 10px solid #fff;
+		padding: 11px 15px;
+	}
+	.my-biji-view li .biji-tit{
+		height: 20px;
+		line-height: 20px;
+		font-size: 14px;
+		color: #000;
+		font-weight: 600;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	.my-biji-view li .biji-content{
+		font-size: 14px;
+		color: #000;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	.my-biji-view li .biji-oth{
+		border-top: 1px solid #f2f2f2;
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 12px;
+		color: #999;
+	}
+	button{
+		padding: 3px 6px;
+		border: none;
+		outline: none;
+		background-color: #cc0000;
+		color: #fff;
+		font-size: 12px;
+		border-radius: 4px;
+	}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<ul class="my-biji-view">
+		<li>
+			<h4 class="biji-tit">
+				1.什么是区块链？
+			</h4>
+			<div class="biji-content">
+				<b>1.什么是区块链？</b><br/>
+				区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、
+				获取权益的数学算法。
+			</div>
+			<a class="biji-oth">
+				<time>2018-01-01 12:00</time>
+				<button>展开</button>
+			</a>
+		</li>
+		<li>
+			<h4 class="biji-tit">
+				2.什么是物联网？
+			</h4>
+			<div class="biji-content">
+				<b>2.什么是物联网？</b><br/>
+				物联网是新一代信息技术的重要组成部分，也是"信息化"时代的重要发展阶段。其英文名称是:"Internet of things(IoT)"。顾名思义，物联网就是物物相连的互联网。这有两层意思:其一，物联网的核心和基础仍然是互联网，是在互联网基础上的延伸和扩展的网络;其二，其用户端延伸和扩展到了任何物品与物品之间，进行信息交换和通信，也就是物物相息。物联网通过智能感知、识别技术与普适计算等通信感知技术，广泛应用于网络的融合中，也因此被称为继计算机、互联网之后世界信息产业发展的第三次浪潮。物联网是互联网的应用拓展，与其说物联网是网络，
+				不如说物联网是业务和应用。因此，应用创新是物联网发展的核心，以用户体验为核心的创新2.0是物联网发展的灵魂。
+			</div>
+			<a class="biji-oth">
+				<time>2018-01-01 12:00</time>
+				<button>展开</button>
+			</a>
+		</li>
+		<li>
+			<h4 class="biji-tit">
+				3.什么是人工智能？
+			</h4>
+			<div class="biji-content">
+				<b>3.什么是人工智能？</b><br/>
+				“人工智能”一词最初是在1956 年Dartmouth学会上提出的。从那以后，研究者们发展了众多理论和原理，人工智能的概念也随之扩展。人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，
+				可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。
+			</div>
+			<a class="biji-oth">
+				<time>2018-01-01 12:00</time>
+				<button>展开</button>
+			</a>
+		</li>
+	</ul>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".biji-content").hide();
+	//按钮点击事件
+	$("button").click(function(){
+		var txts = $(this).parents("li");
+		if ($(this).text() == "展开"){
+			$(this).text("收起");
+			txts.find(".biji-tit").hide();
+			txts.find(".biji-content").show();
+		}else{
+			$(this).text("展开");
+			txts.find(".biji-tit").show();
+			txts.find(".biji-content").hide();
+		}
+	})
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</html>
