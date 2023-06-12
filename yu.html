@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鸟</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css.css">
+
+</head>
+
+<body>
+<div class="container">
+	<ul class="my-biji-view">
+		
+		<li>
+			<h4 class="biji-tit">
+				3.桃花源记回忆？
+			</h4>
+			<div class="biji-content">
+				<b>3.桃花源回忆</b><br/>
+				
+				
+			</div>
+			<a class="biji-oth">
+				<time></time>
+				<button>展开</button>
+			</a>
+		</li>
+		
+		
+		
+	</ul>
+	
+</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".biji-content").hide();
+	//按钮点击事件
+	$("button").click(function(){
+		var txts = $(this).parents("li");
+		if ($(this).text() == "展开"){
+			$(this).text("收起");
+			txts.find(".biji-tit").hide();
+			txts.find(".biji-content").show();
+		}else{
+			$(this).text("展开");
+			txts.find(".biji-tit").show();
+			txts.find(".biji-content").hide();
+		}
+	})
+});
+</script>
+
+
+</html>
