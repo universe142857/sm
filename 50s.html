@@ -31,27 +31,19 @@ time{font-size: 13px;
     background: #ffffff;
     }
 time b{ font-size:15px;} 
-.head_title{
-text-align: center;
-    line-height: 43px;
-    font-size: 28px;
-    padding: 23px 0 0px;
-    color: #ffe872;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-top: 6px solid #09967c;
-    text-shadow: 0 0 10px #167f0a;
-    }
-.head_stitle{    text-align: center;
-    line-height: 18px;
+.head_title{text-align: center;line-height: 43px;font-size: 28px;padding: 20px 0 24px;color: #ffe872;font-weight: bold;letter-spacing: 2px;text-shadow: 0 0 10px #167f0a;}
+.head_stitle{
+    text-align: center;
+    line-height: 20px;
     font-size: 12px;
-    margin: 5px 40px 13px;
-    padding: 5px 9px;
-    color: #ffffff;
+    padding: 7px 10px;
+    height: 17px;
+    color: #abcf74;
     letter-spacing: 2px;
     text-shadow: 0 0 15px #212121;
     background: #00000035;
-    border-radius: 11px;}	
+    overflow: hidden;
+    }		
 .title{
     font-size: 22px;
     text-align: center;
@@ -80,12 +72,67 @@ button{
     padding: 5px 10px;
     font-size: 13px;
     background: #10b429;}
+	
+
+.animate {
+    font-size: 12px;
+    color: #abcf74;
+	text-align:left;
+    /*white-space: nowrap;*/
+    animation: 20s wordsLoop linear infinite normal;
+}
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateX(0%);
+        -webkit-transform: translateY(0%);
+    }
+	
+	30% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+    }
+	
+	80% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(-72%);
+  
+    }
+	
+    100% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-72%);
+    }
+}
+
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateY(0%);
+    }
+	30% {
+        transform: translateX(100%);
+        -webkit-transform: translateY(0%);
+    }
+	80% {
+        transform: translateX(100%);
+        -webkit-transform: translateY(-60%);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateY(-60%);
+    }
+}	
+	
+	
+	
 </style>
 </head>
 
 <body>
+
+<div class="head_stitle"><div class="animate">亲子故事阅读不但可以激发少儿大脑的想象力，还可以在轻松愉快的阅读过程中树立正确的价值观,加之合理引导，就能使孩子在不知不觉中养成良好的品质和习惯!</div></div>
 <div class="head_title">50篇成长寓言童话故事</div>
-<div class="head_stitle">故事阅读可以提升少儿大脑的想象力，并在轻松愉快的过程中树立正确的价值观</div>
 <div class="container">
 	<ul class="my-biji-view">
 		
